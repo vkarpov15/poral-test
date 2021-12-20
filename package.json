@@ -1,0 +1,13 @@
+{
+  "name": "poral-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "@tsconfig/node16": "^1.0.2",
+    "ts-node": "^10.2.1"
+  },
+  "dependencies": {
+    "temporalio": "0.16.x"
+  }
+}

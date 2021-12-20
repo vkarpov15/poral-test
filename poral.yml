@@ -1,0 +1,4 @@
+workflows:
+  testWorkflow:
+    file: workflow.go
+    language: typescript

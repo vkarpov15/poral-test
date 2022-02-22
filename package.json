@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "start": "ts-node src/worker.ts",
+    "workflow": "ts-node src/client.ts"
   },
   "devDependencies": {
     "typescript": "^4.4.3",

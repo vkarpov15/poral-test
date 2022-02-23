@@ -5,7 +5,7 @@ import { afterEach, describe, it } from 'mocha';
 import assert from 'assert';
 import axios from 'axios';
 import dedent from 'dedent';
-import { generateSponsorsWorkflow } from '../workflows';
+import { testWorkflow } from '../workflows';
 import sinon from 'sinon';
 
 describe('generateSponsorsWorkflow', function() {
@@ -48,7 +48,7 @@ describe('generateSponsorsWorkflow', function() {
 
     sinon.stub(axios, 'get').callsFake(() => Promise.resolve(testApiResponse));
 
-    workflow = await client.start(generateSponsorsWorkflow, {
+    workflow = await client.start(testWorkflow, {
       workflowId: 'wf-' + Date.now(),
       taskQueue: 'testsponsors'
     });

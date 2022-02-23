@@ -1,6 +1,6 @@
 // @@@SNIPSTART typescript-hello-client
 import { Connection, WorkflowClient } from '@temporalio/client';
-import { generateSponsorsWorkflow } from './workflows';
+import { testWorkflow } from './workflows';
 
 async function run() {
   const connection = new Connection(); // Connect to localhost with default ConnectionOptions.
@@ -8,7 +8,7 @@ async function run() {
   const client = new WorkflowClient(connection.service);
 
   // Invoke the `example` Workflow, only resolved when the workflow completes
-  const handle = await client.start(generateSponsorsWorkflow, {
+  const handle = await client.start(testWorkflow, {
     taskQueue: 'tutorial',
     workflowId: 'test' + Date.now(),
   });

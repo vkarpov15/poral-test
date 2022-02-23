@@ -7,7 +7,7 @@ const { getSponsors } = proxyActivities<typeof activities>({
   startToCloseTimeout: '1 minute',
 });
 
-export async function generateSponsorsWorkflow(): Promise<string> {
+export async function testWorkflow(): Promise<string> {
   const sponsors = await getSponsors();
 
   const result = [];

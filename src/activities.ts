@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export async function makeHTTPRequest(): Promise<string> {
-  const res = await axios.get('http://httpbin.org/get?answer=test');
+export async function getSponsors(): Promise<any[]> {
+  const res = await axios.get('https://opencollective.com/mongoose/members.json');
 
-  return res.data.args.answer;
+  return res.data;
 }
